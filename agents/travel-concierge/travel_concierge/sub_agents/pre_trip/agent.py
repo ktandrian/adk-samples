@@ -35,7 +35,7 @@ what_to_pack_agent = Agent(
 pre_trip_agent = Agent(
     model="gemini-2.0-flash",
     name="pre_trip_agent",
-    description="Given an itinerary, this agent keeps up to date and provides relevant travel information to the user before the trip.",
+    description="Given an itinerary, this agent keeps up to date and provides relevant travel information to the user before the trip, including what to bring/pack.",
     instruction=prompt.PRETRIP_AGENT_INSTR,
     tools=[google_search_grounding, AgentTool(agent=what_to_pack_agent)],
 )
