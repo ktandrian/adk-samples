@@ -44,6 +44,8 @@ def create() -> None:
 
     remote_agent = agent_engines.create(
         adk_app,
+        display_name="FOMC Research Agent",
+        description=root_agent.description,
         requirements=[f"./{AGENT_WHL_FILE}"],
         extra_packages=[f"./{AGENT_WHL_FILE}"],
     )

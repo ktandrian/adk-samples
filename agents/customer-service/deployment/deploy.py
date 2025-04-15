@@ -76,6 +76,8 @@ else:
     logging.debug("deploying agent to agent engine:")
     remote_app = agent_engines.create(
         app,
+        display_name="Customer Service Agent",
+        description=root_agent.description,
         requirements=[           
             AGENT_WHL_FILE,
         ],

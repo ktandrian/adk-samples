@@ -48,6 +48,8 @@ AGENT_WHL_FILE = "./personalized_shopping-0.1.0-py3-none-any.whl"
 print("Deploying agent to agent engine...")
 remote_app = agent_engines.create(
     app,
+    display_name="Personalized Shopping Agent",
+    description=root_agent.description,
     requirements=[
         AGENT_WHL_FILE,
     ],

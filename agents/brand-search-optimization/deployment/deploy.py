@@ -43,6 +43,8 @@ def create() -> None:
 
     remote_agent = agent_engines.create(
         adk_app,
+        display_name="Brand Search Optimization Agent",
+        description=root_agent.description,
         requirements=[
             "google-adk",
             "google-cloud-aiplatform[agent_engines] @ git+https://github.com/googleapis/python-aiplatform.git@copybara_738852226",

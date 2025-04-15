@@ -53,6 +53,8 @@ def create(env_vars: dict[str, str]) -> None:
 
     remote_agent = agent_engines.create(
         app,
+        display_name="Travel Concierge Agent",
+        description=root_agent.description,
         requirements=[
             "google-adk (>=0.0.2)",
             "google-cloud-aiplatform[agent_engines] @ git+https://github.com/googleapis/python-aiplatform.git@copybara_738852226",
